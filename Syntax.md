@@ -17,15 +17,15 @@
 - [08. IN](#08): 
 - [09. DISTINCT](#09): 
 - [10. ORDER BY](#10): 
-- [SELECT](#11): 選擇
-- [SELECT](#12): 選擇
-- [SELECT](#13): 選擇
-- [SELECT](#14): 選擇
-- [SELECT](#15): 選擇
-- [SELECT](#16): 選擇
-- [SELECT](#17): 選擇
-- [SELECT](#18): 選擇
-- [SELECT](#19): 選擇
+- [11. LIMIT # of returned rows](#11): 
+- [12. ](#12): 
+- [13. ](#13): 
+- [14. ](#14): 
+- [15. ](#15): 
+- [16. ](#16): 
+- [17. ](#17): 
+- [18. ](#18): 
+- [19. ](#19): 
 
 ## **SQL Teaching**
 
@@ -159,4 +159,124 @@ SELECT DISTINCT name, species FROM friends_of_pickles WHERE height_cm > 50;
  */
 
 SELECT * FROM friends_of_pickles ORDER BY name;
+SELECT * FROM friends_of_pickles ORDER BY height_cm DESC;
+```
+
+
+<h3 id="11">11. LIMIT # of returned rows </h3>
+
+```SQL
+/** 
+ * Often, tables contain millions of rows, 
+ * and it can take a while to grab everything. 
+ * If we just want to see a few examples of the data in a table, 
+ * we can select the first few rows with the LIMIT keyword. 
+ * If you use ORDER BY, you would get the first rows for that order.
+ * 
+ * Note: 
+ * - Some variants of SQL do not use the LIMIT keyword.
+ * - The LIMIT keyword comes after the DESC keyword.
+ */
+
+SELECT * FROM friends_of_pickles ORDER BY height_cm LIMIT 2;
+SELECT * FROM friends_of_pickles ORDER BY height_cm DESC LIMIT 1;
+```
+
+
+<h3 id="12">12.  </h3>
+
+```SQL
+/** 
+ * 
+ */
+
+
+```
+
+
+<h3 id="13">13.  </h3>
+
+```SQL
+/** 
+ * 
+ */
+
+
+```
+
+
+<h3 id="14">14.  </h3>
+
+```SQL
+/** 
+ * 
+ */
+
+
+```
+
+
+<h3 id="15">15.  </h3>
+
+```SQL
+/** 
+ * 
+ */
+
+
+```
+
+
+<h3 id="16">16.  </h3>
+
+```SQL
+/** 
+ * 
+ */
+
+
+```
+
+
+<h3 id="17">17.  </h3>
+
+```SQL
+/** 
+ * 
+ */
+
+
+```
+
+
+<h3 id="18">18.  </h3>
+
+```SQL
+/** 
+ * 
+ */
+
+
+```
+
+
+<h3 id="19">19.  </h3>
+
+```SQL
+/** 
+ * 
+ */
+
+
+```
+
+
+<h3 id="20">20.  </h3>
+
+```SQL
+/** 
+ * 
+ */
+
+
 ```
