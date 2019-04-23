@@ -14,7 +14,7 @@
 - [05. WHERE ... >= ](#05): 
 - [06. AND ](#06): 
 - [07. OR ](#07): 
-- [08. IN ](#08): 
+- [08. IN ](#08): 判別變數有沒有在該欄位內，變數可以多個 (val1,val2,...)
 - [09. DISTINCT ](#09): 抓取有哪些不同的值，而每個值出現的次數並不重要
 - [10. ORDER BY ](#10): 
 - [11. LIMIT # of returned rows ](#11): 
@@ -137,8 +137,11 @@ SELECT * FROM friends_of_pickles WHERE height_cm > 25 OR species = 'cat';
  * To find rows that are not in a list, you use NOT IN instead of IN. 
  */
 
-SELECT * FROM friends_of_pickles WHERE species IN ('cat', 'human');
+SELECT * FROM friends_of_pickles WHERE species NOT IN ('cat', 'human');
 ```
+
+![](https://i.imgur.com/jKPX7Yg.png)
+
 
 <h3 id="09">09. DISTINCT </h3>
 
