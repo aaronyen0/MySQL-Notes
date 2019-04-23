@@ -4,6 +4,7 @@
 參考資料
 - [MySQL 語法匯整](http://note.drx.tw/2012/12/mysql-syntax.html)
 - [SQL Teaching](https://www.sqlteaching.com/#!select)
+- [服务器脚本教程](http://www.w3school.com.cn/sql/sql_join_inner.asp)
 ---
 
 ## **目錄**
