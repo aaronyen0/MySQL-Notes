@@ -8,39 +8,57 @@
 ---
 
 ## **目錄**
-- [01. SELECT * FROM table](#01): 列出整個表格
-- [02. SELECT specific columns ](#02): 列出表格的特定欄
-- [03. WHERE ... = ](#03): 只列出該欄滿足特定值的數據
-- [04. WHERE ... > ](#04): 
-- [05. WHERE ... >= ](#05): 
-- [06. AND ](#06): 
-- [07. OR ](#07): 
-- [08. IN ](#08): 判別變數有沒有在該欄位內，變數可以多個 (val1,val2,...)
-- [09. DISTINCT ](#09): 抓取有哪些不同的值，而每個值出現的次數並不重要
-- [10. ORDER BY ](#10): 
-- [11. LIMIT # of returned rows ](#11): 
-- [12. COUNT(*) ](#12): 
-- [13. COUNT(*) ... WHERE ](#13): 
-- [14. SUM ](#14): 
-- [15. AVG ](#15): 
-- [16. MAX and MIN ](#16): 
-- [17. GROUP BY ](#17): 需要分group做一些統計，例如sum, avg, max, min, ...
-- [18. Nested queries ](#18): 巢狀結構用小括號將其他敘述整個包起來
-- [19. NULL ](#19): IS NULL, IS NOT NULL
-- [20. Date ](#20): 日期，注意日期格式可以比大小
-- [21. INNER JOIN ... ON ](#21): 雙方都有的欄位才合併
-- [22. Multiple joins ](#22): 
-- [23. Joins with WHERE ](#23): 
-- [24. LEFT JOIN ... ON ](#24): merge進前面的table內，若有值merge不了則填NULL
-- [25. Table alias ](#25): 
-- [26. Column alias ](#26): 
-- [27. Self joins ](#27): 自己merge自己，需要用alias區隔自己才辦的到
-- [28. LIKE ](#28): 搜尋
-- [29. CASE ](#29): switch判斷
-- [30. SUBSTR ](#30): 
-- [31. COALESCE ](#31): 順序比對，先被比到的就輸出
 
-## **SQL Teaching**
+- **DATABASE**
+    - [01. CREATE DATABASE \`database_name\`](#DB01):
+    - [02. SHOW DATABASE](#DB02):
+    - [03. DROP \`database_name\`](#DB03):
+    - [04. USE \`database_name\`](#DB04):
+    - [05. MYSQLDUMP -u ... -p ... -h ... -P ... --databases ...](#DB05):
+
+- **TABLE**
+    - [01. CREATE TABLE ...](#T01)
+    - [02. DESCRIBE \`table_name\`](#T02)
+    - [03. ALTER TABLE \`table_name\` ADD ...](#T03)
+    - [04. ALTER TABLE \`table_name\` ALTER COLUMN ...](#T04)
+    - [05. ALTER TABLE \`table_name\` DROP COLUMN ...](#T05)
+    - [06. TRUNCATE TABLE ...](#T06)
+
+- **DATA SELECT**
+    - [01. SELECT * FROM table](#01): 列出整個表格
+    - [02. SELECT specific columns ](#02): 列出表格的特定欄
+    - [03. WHERE ... = ](#03): 只列出該欄滿足特定值的數據
+    - [04. WHERE ... > ](#04): 
+    - [05. WHERE ... >= ](#05): 
+    - [06. AND ](#06): 
+    - [07. OR ](#07): 
+    - [08. IN ](#08): 判別變數有沒有在該欄位內，變數可以多個 (val1,val2,...)
+    - [09. DISTINCT ](#09): 抓取有哪些不同的值，而每個值出現的次數並不重要
+    - [10. ORDER BY ](#10): 
+    - [11. LIMIT # of returned rows ](#11): 
+    - [12. COUNT(*) ](#12): 
+    - [13. COUNT(*) ... WHERE ](#13): 
+    - [14. SUM ](#14): 
+    - [15. AVG ](#15): 
+    - [16. MAX and MIN ](#16): 
+    - [17. GROUP BY ](#17): 需要分group做一些統計，例如sum, avg, max, min, ...
+    - [18. Nested queries ](#18): 巢狀結構用小括號將其他敘述整個包起來
+    - [19. NULL ](#19): IS NULL, IS NOT NULL
+    - [20. Date ](#20): 日期，注意日期格式可以比大小
+    - [21. INNER JOIN ... ON ](#21): 雙方都有的欄位才合併
+    - [22. Multiple joins ](#22): 
+    - [23. Joins with WHERE ](#23): 
+    - [24. LEFT JOIN ... ON ](#24): merge進前面的table內，若有值merge不了則填NULL
+    - [25. Table alias ](#25): 
+    - [26. Column alias ](#26): 
+    - [27. Self joins ](#27): 自己join自己，需要用alias區隔同一個變數才辦的到
+    - [28. LIKE ](#28): 搜尋
+    - [29. CASE ](#29): switch判斷
+    - [30. SUBSTR ](#30): 
+    - [31. COALESCE ](#31): 順序比對，先被比到的就輸出
+
+
+## **DATA SELECT**
 
 <h3 id="01">01. SELECT * FROM table </h3>
 
