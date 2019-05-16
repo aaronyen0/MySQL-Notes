@@ -5,28 +5,30 @@
 - [MySQL 語法匯整](http://note.drx.tw/2012/12/mysql-syntax.html)
 - [SQL Teaching](https://www.sqlteaching.com/#!select)
 - [服务器脚本教程](http://www.w3school.com.cn/sql/sql_join_inner.asp)
+- [Most Used MySQL Commands](http://yuqiaoshen.com/drupal/?q=node/3)
 ---
 
 ## **目錄**
 
 - **DATABASE**
-    - [01. CREATE DATABASE \`database_name\`](#DB01):
-    - [02. SHOW DATABASE](#DB02):
-    - [03. DROP \`database_name\`](#DB03):
-    - [04. USE \`database_name\`](#DB04):
+    - [01. CREATE DATABASE \`db_name\`](#DB01):
+    - [02. SHOW DATABASES](#DB02):
+    - [03. DROP \`db_name\`](#DB03):
+    - [04. USE \`db_name\`](#DB04):
     - [05. MYSQLDUMP -u ... -p ... -h ... -P ... --databases ...](#DB05):
 
 - **TABLE**
     - [01. CREATE TABLE ...](#T01)
-    - [02. DESCRIBE \`table_name\`](#T02)
-    - [03. ALTER TABLE \`table_name\` ADD ...](#T03)
-    - [04. ALTER TABLE \`table_name\` ALTER COLUMN ...](#T04)
-    - [05. ALTER TABLE \`table_name\` DROP COLUMN ...](#T05)
-    - [06. TRUNCATE TABLE ...](#T06)
+    - [02. SHOW TABLES FROM \`db_name\`](#T02)
+    - [03. DESCRIBE \`tbl_name\`](#T03)
+    - [04. ALTER TABLE \`tbl_name\` ADD ...](#T04)
+    - [05. ALTER TABLE \`tbl_name\` ALTER COLUMN ...](#T05)
+    - [06. ALTER TABLE \`tbl_name\` DROP COLUMN ...](#T06)
+    - [07. TRUNCATE TABLE ...](#T07)
 
 - **DATA SELECT**
-    - [01. SELECT * FROM table](#01): 列出整個表格
-    - [02. SELECT specific columns ](#02): 列出表格的特定欄
+    - [01. SELECT * FROM \`tbl_name\`](#01): 列出整個表格
+    - [02. SELECT \`col_name1\`, \`col_name2\`, ... FROM \`tbl_name\`](#02): 列出表格的特定欄
     - [03. WHERE ... = ](#03): 只列出該欄滿足特定值的數據
     - [04. WHERE ... > ](#04): 
     - [05. WHERE ... >= ](#05): 
@@ -60,7 +62,7 @@
 
 ## **DATA SELECT**
 
-<h3 id="01">01. SELECT * FROM table </h3>
+<h3 id="01">01. SELECT * FROM `tbl_name` </h3>
 
 ```SQL
 /** 
@@ -72,7 +74,7 @@ SELECT * FROM family_members;
 ```
 
 
-<h3 id="02">02. SELECT specific columns </h3>
+<h3 id="02">02. SELECT `col_name1`, `col_name2`, ...  FROM `tbl_name` </h3>
 
 ```SQL
 /* If we only want to see the name and num_books_read, we would type */
